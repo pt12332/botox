@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Overlay Text and Link</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Name -->
+        <span class="name style">Aron</span>
+        <!-- Hamburger Icon -->
+        <button class="icon" onclick="toggleMenu()" aria-label="Toggle navigation">
+            
+            <span>&#9776;</span>
+        </button>
+        <!-- Navigation Links -->
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        
+    </div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="1.jpg" alt="Descriptive text about the image">
+            <div class="centered-text">Health/Beauty</div>
+            <h1 class="centered-text">Aesthetic Nurse Injector</h1>
+            <a href="#viewWorkSection" class="view-work">View Work <span class="arrow">&#x2193;</span></a>
+        </div>
+    </div>
+
+    <div id="viewWorkSection">
+        <h2>Our Work</h2>
+        <div class="work-gallery">
+            <img src="2.PNG" alt="Work example 1">
+            <img src="3.PNG" alt="Work example 2">
+            <img src="4.PNG" alt="Work example 3">
+        </div>
+        <!-- Include more content about your work here -->
+    </div>
+
+
+    <div id="About">
+        <h2>About us</h2>
+        <div class="about-box">
+            <p>The writing on this page will be about 500 words - the point being to demonstrate what it looks like.
+
+                It doesn't matter a whole deal what this is about, it will wander along in a reasonably simple and quick fashion, depending on your reading pace of course.
+                
+                The purpose, and all writing has to have a purpose, except the best sort which is writing that doesn't, the purpose being to give a rough idea of words on a page and how much space 500 of them take up.
+                
+                ​I guess that many people would be horrified to talk about words being used as filler, but the truth is, that is all writers do.  Sure, they can dress it up as pretty meaningful prose, or important news or even poetry but it is all mere letters, arranged to lesser or greater effect.
+                
+                For my part, I love words and playing with them, shifting them around in my head and then laying them out, attempting to make a coherent point about something.  The completion of the exercise gives me much pleasure.
+                
+                On this occasion I am working within a narrow remit.  It is to show you what 500 of these beauties look like when laid end to end.
+                </p>
+        </div>
+    </div>
+    
+
+
+    <script>
+        function toggleMenu() {
+            var links = document.querySelectorAll('.nav-link');
+            links.forEach(function(link) {
+                link.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+<script>
+    function toggleMenu() {
+        var links = document.querySelectorAll('.navbar a:not(.icon)');
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].style.display === 'block') {
+                links[i].style.display = 'none';
+            } else {
+                links[i].style.display = 'block';
+            }
+        }
+    }
+</script>
+
+</html>

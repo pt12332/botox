@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Overlay Text and Link</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Name -->
+        <span class="name style">Aron</span>
+        <!-- Hamburger Icon -->
+        <button class="icon" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <span>&#9776;</span>
+        </button>
+        <!-- Navigation Links -->
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        
+    </div>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth; /* Enables smooth scrolling */
+        background-color: #ffffff;
+    }
+
+    header.navbar {
+        background-color: #fff; /* Change background color to white */
+        padding: 0 20px;
+    }
+
+    nav {
+        text-align: right; /* Aligns the text to the right */
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none; /* Removes bullet points from the list */
+        display: inline-block; /* Makes the list horizontally aligned */
+    }
+
+    nav ul li {
+        display: inline; /* List items displayed inline */
+        padding-left: 20px; /* Adds spacing between the links */
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #000; /* Sets the text color to black */
+    }
+
+    nav ul li a:hover {
+        background-color: #0000007a;
+        color: #333; 
+    }
+
+    .container {
+        width: 80%;
+        margin: 20px auto; /* Centers the container and adds some top margin */
+        background-color: #ffffff; /* Ensures the background is white */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    }
+
+    .form-container, .appointment-container {
+        background-color: #0a192f; /* Dark background for the form area */
+        color: #ccd6f6; /* Light text color for contrast */
+        padding: 4rem;
+        text-align: center;
+        margin-bottom: 20px; /* Adds spacing between the two sections */
+    }
+
+    .form-field {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem; /* Spacing between fields */
+        border: none;
+        border-radius: 5px;
+    }
+
+    .submit-button, .appointment-button {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .submit-button:hover, .appointment-button:hover {
+        background-color: #fcd34d; /* Yellow color on hover */
+        border-color: #fcd34d;
+    }
+</style>
+</head>
+
+
+    
+    <div class="container">
+        <!-- Book an Appointment Section -->
+        <div class="appointment-container">
+            <div>
+                <p style="font-size: 50px; font-weight: bold; border-bottom: 4px solid rgb(177, 177, 74); color: rgb(255, 255, 255);">Book an Appointment</p>
+            </div>
+            <a href="booking.html" class="appointment-button">Book Now</a>
+            <a href="571-505-8388" class="appointment-button">Call us</a>
+
+        </div>
+
+        <!-- Request a Quote Section -->
+        <form method="POST" action="https://getform.io/f/8b30bb26-1aa4-4c89-bfcf-1fff4b243c3c" class="form-container">
+            <div>
+                <p style="font-size: 50px; font-weight: bold; border-bottom: 4px solid rgb(177, 177, 74); color: rgb(255, 255, 255);">Request A Quote</p>
+            </div>
+            <input class="form-field" type="text" placeholder="Name" name="name" required />
+            <input class="form-field" type="email" placeholder="Email" name="email" required />
+            <textarea class="form-field" name="message" rows="10" placeholder="Message" required></textarea>
+            <button class="submit-button" type="submit">Let's Work Together</button>
+        </form>
+    </div>
+</body>
+</html>
